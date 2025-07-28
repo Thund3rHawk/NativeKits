@@ -46,7 +46,7 @@ jspm_packages/
 .env.production.local
 
 # Built files
-lib/
+
 dist/
 build/
 
