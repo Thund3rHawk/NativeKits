@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ui-components",
+  "name": "nativekit",
   "version": "1.0.0",
   "description": "A beautiful React Native UI component library with TypeScript support",
   "main": "lib/index.js",
@@ -32,16 +32,16 @@
     "expo",
     "cli"
   ],
-  "author": "Your Name",
+  "author": "thund3rhawk",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-native-ui-components.git"
+    "url": "https://github.com/yourusername/nativekit.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-native-ui-components/issues"
+    "url": "https://github.com/yourusername/nativekit/issues"
   },
-  "homepage": "https://github.com/yourusername/react-native-ui-components#readme",
+  "homepage": "https://github.com/yourusername/nativekit#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-native": ">=0.60.0"

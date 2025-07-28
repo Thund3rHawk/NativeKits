@@ -6,14 +6,14 @@ import CodeBlock from '../components/CodeBlock';
 import AccordionExample from '../components/AccordionExample';
 
 const installationCode = {
-  npm: `npm install react-native-ui-components`,
-  yarn: `yarn add react-native-ui-components`,
-  expo: `npx expo install react-native-ui-components react-native-reanimated`
+  npm: `npm install nativekit`,
+  yarn: `yarn add nativekit`,
+  expo: `npx expo install nativekit react-native-reanimated`
 };
 
 const basicUsageCode = `import React from 'react';
 import { View } from 'react-native';
-import { Accordion, AccordionItem } from 'react-native-ui-components';
+import { Accordion, AccordionItem } from 'nativekit';
 
 const MyApp = () => {
   return (
@@ -34,7 +34,7 @@ export default MyApp;`;
 
 const advancedUsageCode = `import React from 'react';
 import { View, Text } from 'react-native';
-import { Accordion, AccordionItem, theme } from 'react-native-ui-components';
+import { Accordion, AccordionItem, theme } from 'nativekit';
 
 const CustomAccordion = () => {
   return (
@@ -84,7 +84,7 @@ export default function Home() {
                 Documentation
               </a>
               <a
-                href="https://github.com/yourusername/react-native-ui-components"
+                href="https://github.com/yourusername/nativekit"
                 className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
               >
                 GitHub
