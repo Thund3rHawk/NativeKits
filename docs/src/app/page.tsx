@@ -7,8 +7,7 @@ import { ThemeToggle } from "@/components/global/theme-toggle"
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col mx-auto min-h-screen">
-      {/* Header */}
+
       
 
       <main className="flex-1 mx-auto">
@@ -41,13 +40,13 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="https://github.com/nativekit/nativekit">
+                  <Link href="https://github.com/thund3rhawk/nativekit">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
                   </Link>
                 </Button>
               </div>
-              <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+              {/* <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
                   <Star className="h-4 w-4 mr-1 fill-yellow-400 text-yellow-400" />
                   <span>2.1k stars</span>
@@ -60,7 +59,7 @@ export default function HomePage() {
                   <Users className="h-4 w-4 mr-1" />
                   <span>500+ developers</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -229,13 +228,12 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="https://github.com/nativekit/nativekit">View Examples</Link>
+                  <Link href="https://github.com/thund3rhawk/nativekit">View Examples</Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
       </main>     
-    </div>
   )
 }
