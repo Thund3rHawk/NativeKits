@@ -22,6 +22,7 @@ const eslintConfig = [
       "@typescript-eslint/no-wrapper-object-types": "warn",
       "@typescript-eslint/no-unnecessary-type-constraint": "warn",
       "@typescript-eslint/no-unsafe-function-type": "warn",
+      "react/no-unescaped-entities": 'warn'
 
     }
   }
