@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/global/theme-toggle"
 
 export default function HomePage() {
   return (
-
+    <div className="flex flex-col mx-auto min-h-screen">
       
 
       <main className="flex-1 mx-auto">
@@ -235,5 +235,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>     
+    </div>
   )
 }
