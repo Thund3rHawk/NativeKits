@@ -1,6 +1,6 @@
 # React Native UI Components
 
-[![npm version](https://badge.fury.io/js/react-native-ui-components.svg)](https://badge.fury.io/js/react-native-ui-components)
+[![npm version](https://badge.fury.io/js/nativekit.svg)](https://badge.fury.io/js/nativekit)
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -20,9 +20,9 @@ A beautiful, TypeScript-first React Native UI component library with support for
 ### React Native CLI
 
 ```bash
-npm install react-native-ui-components react-native-reanimated
+npm install nativekit react-native-reanimated
 # or
-yarn add react-native-ui-components react-native-reanimated
+yarn add nativekit react-native-reanimated
 ```
 
 For iOS, you'll also need to run:
@@ -33,7 +33,7 @@ cd ios && pod install
 ### Expo Managed Workflow
 
 ```bash
-npx expo install react-native-ui-components react-native-reanimated
+npx expo install nativekit react-native-reanimated
 ```
 
 ## 🚀 Quick Start
@@ -41,7 +41,7 @@ npx expo install react-native-ui-components react-native-reanimated
 ```tsx
 import React from 'react';
 import { View, Text } from 'react-native';
-import { Accordion, AccordionItem } from 'react-native-ui-components';
+import { Accordion, AccordionItem } from 'nativekit';
 
 const App = () => {
   return (
@@ -150,7 +150,7 @@ A collapsible content component perfect for FAQs, settings panels, and content o
 #### Example
 
 ```tsx
-import { Accordion, AccordionItem, theme } from 'react-native-ui-components';
+import { Accordion, AccordionItem, theme } from 'nativekit';
 
 <Accordion 
   allowMultiple={false}
@@ -175,7 +175,7 @@ import { Accordion, AccordionItem, theme } from 'react-native-ui-components';
 The library comes with a built-in theme system that you can customize:
 
 ```tsx
-import { theme } from 'react-native-ui-components';
+import { theme } from 'nativekit';
 
 // Access theme values
 const primaryColor = theme.colors.primary;
@@ -315,8 +315,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📖 [Documentation](https://your-docs-url.com)
-- 🐛 [Report Issues](https://github.com/yourusername/react-native-ui-components/issues)
-- 💬 [Discussions](https://github.com/yourusername/react-native-ui-components/discussions)
+- 🐛 [Report Issues](https://github.com/yourusername/nativekit/issues)
+- 💬 [Discussions](https://github.com/yourusername/nativekit/discussions)
 
 ---
 
