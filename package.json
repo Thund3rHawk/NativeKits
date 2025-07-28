@@ -17,7 +17,6 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "test": "jest",
-    "lint": "eslint src --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
     "docs:dev": "cd docs && npm run dev",
     "docs:build": "cd docs && npm run build",
