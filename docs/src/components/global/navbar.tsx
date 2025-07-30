@@ -1,12 +1,31 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { ThemeToggle } from "@/components/global/theme-toggle"
 import Link from 'next/link'
-import { Github, Home } from 'lucide-react'
+import { Github } from 'lucide-react'
 import { Button } from '../ui/button'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
+  const [stars, setStars] = useState(null);
+
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const response = await fetch(`https://api.github.com/repos/thund3rhawk/nativekits`);
+        const data = await response.json();
+        setStars(data.stargazers_count);
+        console.log(data);
+        
+      } catch (error) {
+        console.error('Error fetching stars:', error);
+      }
+    };
+
+    fetchStars();
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-14 items-center justify-center">
@@ -15,7 +34,7 @@ const Navbar = (props: Props) => {
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
               <span className="text-white font-bold text-sm">NK</span>
             </div>
-            <span className="font-bold text-xl">NativeKit</span>
+            <span className="font-bold text-xl">NativeKits</span>
           </Link>
         </div>
         <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -29,17 +48,17 @@ const Navbar = (props: Props) => {
             Examples
           </Link>
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <ThemeToggle />
+        <div className="flex flex-1 items-center justify-end space-x-5">          
           <Button variant="ghost" size="sm" asChild>
             <Link href="https://github.com/thund3rhawk/nativekit" target='_blank'>
               <Github className="h-4 w-4" />
-              <span className="sr-only">GitHub</span>
+              <span>{stars}</span>
             </Link>
           </Button>
           <Button size="sm" asChild>
             <Link href="/docs">Get Started</Link>
           </Button>
+          <ThemeToggle />
         </div>
       </div>
     </header>

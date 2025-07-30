@@ -28,7 +28,7 @@ export default function HomePage() {
                   </span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  NativeKit is a comprehensive React Native UI library with 50+ customizable components, built-in
+                  NativeKits is a comprehensive React Native UI library with 50+ customizable components, built-in
                   accessibility, and TypeScript support. Ship your mobile app in days, not months.
                 </p>
               </div>
@@ -40,7 +40,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="https://github.com/thund3rhawk/nativekit">
+                  <Link href="https://github.com/thund3rhawk/nativekits">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
                   </Link>
@@ -73,7 +73,7 @@ export default function HomePage() {
                   Everything you need to build amazing apps
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  From basic components to complex layouts, NativeKit provides all the building blocks you need for your
+                  From basic components to complex layouts, NativeKits provides all the building blocks you need for your
                   React Native applications.
                 </p>
               </div>
@@ -111,59 +111,77 @@ export default function HomePage() {
         </section>
 
         {/* Code Example Section */}
-        <section id="examples" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Simple. Powerful. Flexible.</h2>
-                <p className="text-muted-foreground md:text-lg">
-                  Get started with just a few lines of code. NativeKit components are designed to be intuitive and easy
-                  to use while providing powerful customization options.
-                </p>
-                <div className="bg-muted rounded-lg p-6 font-mono text-sm">
-                  <div className="text-muted-foreground mb-2">// Install NativeKit</div>
-                  <div className="text-green-600">npm install nativekit</div>
-                  <br />
-                  <div className="text-muted-foreground mb-2">// Use components</div>
-                  <div>
-                    <span className="text-blue-600">import</span> {`{ Button, Card }`}{" "}
-                    <span className="text-blue-600">from</span> <span className="text-green-600">'nativekit'</span>
-                  </div>
-                  <br />
-                  <div>
-                    <span className="text-purple-600">{"<Button"}</span> <span className="text-blue-600">variant</span>=
-                    <span className="text-green-600">"primary"</span>
-                    <span className="text-purple-600">{">"}</span>
-                  </div>
-                  <div className="ml-4">Get Started</div>
-                  <div>
-                    <span className="text-purple-600">{"</Button>"}</span>
-                  </div>
+        <section
+          id="examples"
+          className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center"
+          style={{ minHeight: "60vh" }}
+        >
+          <div className="container px-4 md:px-6 mx-auto flex items-center justify-center">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center mx-auto">
+              {/* Left: Text & Code */}
+              <div className="space-y-8 flex flex-col items-center w-full">
+          <h2 className="text-4xl font-extrabold tracking-tight text-center bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+            Simple. Powerful. Flexible.
+          </h2>
+          <p className="text-muted-foreground md:text-lg text-center">
+            Get started with just a few lines of code. NativeKit components are intuitive, easy to use, and highly customizable.
+          </p>
+          <div className="w-full max-w-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 mx-auto">
+            <div className="flex items-center mb-4">
+              <span className="w-2 h-2 rounded-full bg-red-500 mr-2"></span>
+              <span className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></span>
+              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            </div>
+            <pre className="font-mono text-sm text-gray-100 whitespace-pre-wrap">
+              <span className="text-gray-500">// 🚀 Install NativeKits</span>
+              {"\n"}
+              <span className="text-green-400">$ npm install nativekits</span>
+              {"\n\n"}
+              <span className="text-gray-500">// 💡 Use components</span>
+              {"\n"}
+              <span className="text-blue-400">import</span>{" "}
+              <span className="text-yellow-300">{`{ Button, Card }`}</span>{" "}
+              <span className="text-blue-400">from</span>{" "}
+              <span className="text-green-400">'nativekits'</span>
+              {"\n\n"}
+              <span className="text-purple-400">&lt;Button</span>{" "}
+              <span className="text-blue-400">variant</span>
+              <span className="text-gray-100">=</span>
+              <span className="text-green-400">"primary"</span>
+              <span className="text-purple-400">&gt;</span>
+              {"\n  "}Get Started
+              {"\n"}
+              <span className="text-purple-400">&lt;/Button&gt;</span>
+            </pre>
+          </div>
+              </div>
+              {/* Right: Mobile Preview */}
+              <div className="flex justify-center w-full">
+          <div className="relative flex justify-center w-full">
+            <div className="w-72 h-[420px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-3 shadow-2xl border border-gray-700 flex items-center justify-center mx-auto">
+              <div className="w-full h-full bg-gradient-to-br from-gray-950 to-gray-900 rounded-2xl p-6 flex flex-col space-y-6">
+                <div className="text-center">
+            <h3 className="font-bold text-lg text-white">Welcome</h3>
+            <p className="text-sm text-gray-400">Built with NativeKits</p>
+                </div>
+                <div className="space-y-4 flex-1">
+            <div className="h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
+              <span className="text-white text-sm font-semibold">Primary Button</span>
+            </div>
+            <div className="h-10 border-2 border-gray-600 rounded-lg flex items-center justify-center bg-gray-900">
+              <span className="text-gray-200 text-sm font-medium">Secondary Button</span>
+            </div>
+            <div className="bg-gray-800 rounded-lg p-4">
+              <div className="h-4 bg-gray-700 rounded mb-2"></div>
+              <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+            </div>
+                </div>
+                <div className="flex justify-center">
+            <span className="text-xs text-gray-500">NativeKits UI Preview</span>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <div className="relative">
-                  <div className="w-64 h-96 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-2 shadow-2xl">
-                    <div className="w-full h-full bg-white rounded-2xl p-6 flex flex-col space-y-4">
-                      <div className="text-center">
-                        <h3 className="font-bold text-lg">Welcome</h3>
-                        <p className="text-sm text-muted-foreground">Built with NativeKit</p>
-                      </div>
-                      <div className="space-y-3 flex-1">
-                        <div className="h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-sm font-medium">Primary Button</span>
-                        </div>
-                        <div className="h-10 border-2 border-gray-300 rounded-lg flex items-center justify-center">
-                          <span className="text-gray-700 text-sm font-medium">Secondary Button</span>
-                        </div>
-                        <div className="bg-gray-50 rounded-lg p-4">
-                          <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+          </div>
               </div>
             </div>
           </div>
@@ -217,7 +235,7 @@ export default function HomePage() {
                   Ready to build your next app?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join thousands of developers who are already building amazing mobile experiences with NativeKit.
+                  Join thousands of developers who are already building amazing mobile experiences with NativeKits.
                 </p>
               </div>
               <div className="space-x-4">
@@ -228,7 +246,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="https://github.com/thund3rhawk/nativekit">View Examples</Link>
+                  <Link href="https://github.com/thund3rhawk/nativekits">View Examples</Link>
                 </Button>
               </div>
             </div>
