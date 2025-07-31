@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text } from 'react-native';
-import { Accordion, AccordionItem } from '../index';
+import { Accordion, AccordionItem } from '../Accordion/index';
 
 describe('Accordion', () => {
   it('renders correctly', () => {
@@ -14,6 +14,18 @@ describe('Accordion', () => {
     );
 
     expect(getByText('Test Item')).toBeTruthy();
+  });
+
+  it('renders badge with content', () => {
+    const tree = render(
+      <Accordion>
+        <AccordionItem title="Test Item">
+          <Text>Test Content</Text>
+        </AccordionItem>
+      </Accordion>
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('expands and collapses on press', () => {
