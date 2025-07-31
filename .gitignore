@@ -49,6 +49,7 @@ jspm_packages/
 
 dist/
 build/
+lib/
 
 # macOS
 .DS_Store
@@ -60,7 +61,7 @@ ehthumbs.db
 Thumbs.db
 
 # IDE
-.vscode/
+# .vscode/
 .idea/
 *.swp
 *.swo
