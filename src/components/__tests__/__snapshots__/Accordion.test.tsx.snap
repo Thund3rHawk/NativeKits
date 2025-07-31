@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion renders badge with content 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#F8F9FA",
+          "borderRadius": 8,
+          "elevation": 5,
+          "marginBottom": 8,
+          "overflow": "hidden",
+          "shadowColor": "rgba(0, 0, 0, 0.1)",
+          "shadowOffset": {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 3.84,
+        },
+        [
+          undefined,
+          false,
+        ],
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "padding": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#1C1C1E",
+              "flex": 1,
+              "fontSize": 16,
+              "fontWeight": "600",
+              "marginRight": 8,
+            },
+            undefined,
+          ]
+        }
+      >
+        Test Item
+      </Text>
+      <View
+        style={
+          [
+            {
+              "height": 0,
+              "width": 0,
+            },
+            {
+              "borderTopColor": "#007AFF",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "borderLeftColor": "transparent",
+                "borderLeftWidth": 6,
+                "borderRightColor": "transparent",
+                "borderRightWidth": 6,
+                "borderTopWidth": 8,
+                "height": 0,
+                "width": 0,
+              },
+              {
+                "borderTopColor": "#007AFF",
+                "transform": [
+                  {
+                    "rotate": "0deg",
+                  },
+                ],
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
