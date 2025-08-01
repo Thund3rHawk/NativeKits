@@ -1,11 +1,11 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import { ThemeToggle } from "@/components/global/theme-toggle"
-import Link from 'next/link'
-import { Github } from 'lucide-react'
-import { Button } from '../ui/button'
+'use client';
+import React, { useEffect, useState } from 'react';
+import { ThemeToggle } from '@/components/global/theme-toggle';
+import Link from 'next/link';
+import { Github } from 'lucide-react';
+import { Button } from '../ui/button';
 
-type Props = {}
+type Props = {};
 
 const Navbar = (props: Props) => {
   const [stars, setStars] = useState(null);
@@ -13,11 +13,12 @@ const Navbar = (props: Props) => {
   useEffect(() => {
     const fetchStars = async () => {
       try {
-        const response = await fetch(`https://api.github.com/repos/thund3rhawk/nativekits`);
+        const response = await fetch(
+          `https://api.github.com/repos/thund3rhawk/nativekits`
+        );
         const data = await response.json();
         setStars(data.stargazers_count);
         console.log(data);
-        
       } catch (error) {
         console.error('Error fetching stars:', error);
       }
@@ -38,19 +39,31 @@ const Navbar = (props: Props) => {
           </Link>
         </div>
         <nav className="flex items-center space-x-6 text-sm font-medium">
-          <Link href="/docs" className="transition-colors hover:text-foreground/80">
+          <Link
+            href="/docs"
+            className="transition-colors hover:text-foreground/80"
+          >
             Documentation
           </Link>
-          <Link href="#components" className="transition-colors hover:text-foreground/80">
+          <Link
+            href="#components"
+            className="transition-colors hover:text-foreground/80"
+          >
             Components
           </Link>
-          <Link href="#examples" className="transition-colors hover:text-foreground/80">
+          <Link
+            href="#examples"
+            className="transition-colors hover:text-foreground/80"
+          >
             Examples
           </Link>
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-5">          
+        <div className="flex flex-1 items-center justify-end space-x-5">
           <Button variant="ghost" size="sm" asChild>
-            <Link href="https://github.com/thund3rhawk/nativekit" target='_blank'>
+            <Link
+              href="https://github.com/thund3rhawk/nativekit"
+              target="_blank"
+            >
               <Github className="h-4 w-4" />
               <span>{stars}</span>
             </Link>
@@ -62,7 +75,7 @@ const Navbar = (props: Props) => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

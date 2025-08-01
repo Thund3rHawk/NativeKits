@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { DM_Sans, Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/global/navbar";
-import Footer from "@/components/global/footer";
+import type { Metadata } from 'next';
+import { DM_Sans, Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '@/components/global/navbar';
+import Footer from '@/components/global/footer';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -16,12 +16,12 @@ import Footer from "@/components/global/footer";
 // });
 
 const dm_sans = DM_Sans({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "NativeKits",
-  description: "A beautiful React Native UI Library",
+  title: 'NativeKits',
+  description: 'A beautiful React Native UI Library',
 };
 
 export default function RootLayout({
@@ -30,20 +30,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-     <html lang="en" suppressHydrationWarning>
-        <head />
-        <body className={dm_sans.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar/>
-            {children}
-            <Footer/>
-          </ThemeProvider>
-        </body>
-      </html>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className={dm_sans.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

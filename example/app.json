@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NativeKits example",
-    "slug": "NativeKits example",
+    "name": "NativeKits_Example",
+    "slug": "NativeKits_Example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "083ca594-0a35-4dbd-98a4-81e4be75cd4e"
+      }
+    },
+    "owner": "swadhin_15",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/083ca594-0a35-4dbd-98a4-81e4be75cd4e"
     }
   }
 }
