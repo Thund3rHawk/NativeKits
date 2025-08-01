@@ -16,9 +16,9 @@ const Accordion: React.FC<AccordionProps> = ({
   );
 
   const handleToggle = (index: number) => {
-    setExpandedItems(prev => {
+    setExpandedItems((prev) => {
       const newSet = new Set(prev);
-      
+
       if (newSet.has(index)) {
         newSet.delete(index);
       } else {
@@ -27,7 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({
         }
         newSet.add(index);
       }
-      
+
       return newSet;
     });
   };
@@ -42,7 +42,9 @@ const Accordion: React.FC<AccordionProps> = ({
             onToggle: () => handleToggle(index),
             containerStyle: [
               child.props.containerStyle,
-              index < Children.count(children) - 1 && { marginBottom: itemSpacing },
+              index < Children.count(children) - 1 && {
+                marginBottom: itemSpacing,
+              },
             ],
           });
         }

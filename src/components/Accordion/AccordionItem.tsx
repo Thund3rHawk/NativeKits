@@ -63,9 +63,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </View>
       </TouchableOpacity>
       {isExpanded && (
-        <View style={[styles.content, contentStyle]}>
-          {children}
-        </View>
+        <View style={[styles.content, contentStyle]}>{children}</View>
       )}
     </View>
   );

@@ -1,0 +1,40 @@
+# Ignore artifacts:
+node_modules
+build
+dist
+coverage
+.next
+out
+.expo
+.expo-shared
+
+# Ignore lock files:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore config files:
+*.config.js
+*.config.cjs
+*.config.mjs
+*.config.ts
+
+# Ignore environment files:
+.env
+.env.*
+
+# Ignore test snapshots:
+**/__snapshots__/
+**/*.snap
+
+# Ignore generated files:
+public
+assets
+*.min.js
+*.min.css
+
+# Ignore documentation:
+*.md
+
+# Ignore system files:
+.DS_Store

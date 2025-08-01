@@ -17,14 +17,6 @@
     "rootDir": "src",
     "jsx": "react-jsx"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "docs",
-    "**/__tests__/**",
-    "**/*.test.*"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib", "docs", "**/__tests__/**", "**/*.test.*"]
 }
