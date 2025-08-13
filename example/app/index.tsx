@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native';
-import { Badge } from 'nativekits';
+import { Accordion, AccordionItem, Badge } from 'nativekits';
 
 export default function Index() {
   return (
@@ -19,7 +19,8 @@ export default function Index() {
           <Text>Content 2</Text>
         </AccordionItem>
       </Accordion> */}
-      <Badge>42</Badge>
+      {/* <Badge>42</Badge> */}
+      <Badge variant="primary" outlined>Outlined Badge</Badge>
     </View>
   );
 }

@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "lib": ["es2018"],
+    "lib": [
+      "es2018"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
@@ -17,6 +18,15 @@
     "rootDir": "src",
     "jsx": "react-native"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "lib", "docs", "**/__tests__/**", "**/*.test.*"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "docs",
+    "**/__tests__/**",
+    "**/*.test.*"
+  ],
+  "extends": "expo/tsconfig.base"
 }
