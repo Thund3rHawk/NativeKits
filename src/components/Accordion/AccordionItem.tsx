@@ -17,7 +17,7 @@ if (Platform.OS === 'android') {
   }
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({
+const AccordionItem = ({
   title,
   children,
   isExpanded = false,
@@ -27,7 +27,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   contentStyle,
   iconColor = theme.colors.primary,
   animationDuration = 300,
-}) => {
+}: AccordionItemProps): JSX.Element => {
   const handleToggle = () => {
     LayoutAnimation.configureNext({
       duration: animationDuration,

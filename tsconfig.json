@@ -15,7 +15,7 @@
     "declaration": true,
     "outDir": "lib",
     "rootDir": "src",
-    "jsx": "react-jsx"
+    "jsx": "react-native"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "lib", "docs", "**/__tests__/**", "**/*.test.*"]
