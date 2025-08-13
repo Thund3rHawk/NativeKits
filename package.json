@@ -21,7 +21,11 @@
     "docs:dev": "cd docs && npm run dev",
     "docs:build": "cd docs && npm run build",
     "prepare": "npm run build",
-    "lint": "eslint"
+    "lint": "eslint",
+    "example": "npm --cwd example"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react-native",
@@ -43,8 +47,13 @@
   },
   "homepage": "https://nativekits.vercel.app",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-native": ">=0.60.0"
+    "react": "*",
+    "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
@@ -76,7 +85,11 @@
     "ts-jest": "^29.4.0",
     "typescript": "^5.3.3"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
+    "expo": "^53.0.20",
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
     "react-native-reanimated": "^4.0.1",

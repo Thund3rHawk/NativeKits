@@ -4,13 +4,13 @@ import { AccordionProps } from './types';
 import AccordionItem from './AccordionItem';
 import theme from '../../theme';
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion = ({
   children,
   allowMultiple = false,
   defaultExpandedItems = [],
   containerStyle,
   itemSpacing = theme.spacing.sm,
-}) => {
+}: AccordionProps): JSX.Element => {
   const [expandedItems, setExpandedItems] = useState<Set<number>>(
     new Set(defaultExpandedItems)
   );
