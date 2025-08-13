@@ -36,12 +36,12 @@ const Accordion = ({
     <View style={[styles.container, containerStyle]}>
       {Children.map(children, (child, index) => {
         if (React.isValidElement(child) && child.type === AccordionItem) {
-          return cloneElement(child as ReactElement, {
+          return cloneElement(child as ReactElement<any>, {
             key: index,
             isExpanded: expandedItems.has(index),
             onToggle: () => handleToggle(index),
             containerStyle: [
-              child.props.containerStyle,
+              (child.props as any).containerStyle,
               index < Children.count(children) - 1 && {
                 marginBottom: itemSpacing,
               },
