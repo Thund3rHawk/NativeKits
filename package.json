@@ -23,7 +23,9 @@
     "docs:build": "cd docs && npm run build",
     "prepare": "npm run build",
     "lint": "eslint",
-    "example": "npm --cwd example"
+    "example": "npm --cwd example",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
