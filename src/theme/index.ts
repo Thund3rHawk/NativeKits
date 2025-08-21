@@ -6,9 +6,11 @@ const theme: Theme = {
     secondary: '#5856D6',
     background: '#FFFFFF',
     surface: '#F8F9FA',
+    surfaceVariant: '#F2F2F7',
     text: '#1C1C1E',
     textSecondary: '#6C6C70',
     border: '#E5E5EA',
+    outline: '#D1D1D6',
     shadow: 'rgba(0, 0, 0, 0.1)',
   },
   spacing: {
