@@ -4,9 +4,11 @@ export interface Theme {
     secondary: string;
     background: string;
     surface: string;
+    surfaceVariant: string;
     text: string;
     textSecondary: string;
     border: string;
+    outline: string;
     shadow: string;
   };
   spacing: {
