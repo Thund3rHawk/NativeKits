@@ -10,22 +10,22 @@ type Props = {};
 const Navbar = (props: Props) => {
   const [stars, setStars] = useState(null);
 
-  useEffect(() => {
-    const fetchStars = async () => {
-      try {
-        const response = await fetch(
-          `https://api.github.com/repos/thund3rhawk/nativekits`
-        );
-        const data = await response.json();
-        setStars(data.stargazers_count);
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching stars:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchStars = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://api.github.com/repos/thund3rhawk/nativekits`
+  //       );
+  //       const data = await response.json();
+  //       setStars(data.stargazers_count);
+  //       console.log(data);
+  //     } catch (error) {
+  //       console.error('Error fetching stars:', error);
+  //     }
+  //   };
 
-    fetchStars();
-  }, []);
+  //   fetchStars();
+  // }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -65,7 +65,7 @@ const Navbar = (props: Props) => {
               target="_blank"
             >
               <Github className="h-4 w-4" />
-              <span>{stars}</span>
+              {/* <span>{stars}</span> */}
             </Link>
           </Button>
           <Button size="sm" asChild>
