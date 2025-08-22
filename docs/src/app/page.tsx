@@ -47,7 +47,7 @@ export default function HomePage() {
               </div>
               <div className="space-x-4">
                 <Button size="lg" asChild>
-                  <Link href="/docs">
+                  <Link href="/comming_soon">
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -256,7 +256,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-8">
               <Button size="lg" asChild>
-                <Link href="/docs">
+                <Link href="/comming_soon">
                   Explore All Components
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -280,13 +280,13 @@ export default function HomePage() {
               </div>
               <div className="space-x-4">
                 <Button size="lg" asChild>
-                  <Link href="/docs">
+                  <Link href="/comming_soon">
                     Get Started Now
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="https://github.com/thund3rhawk/nativekits">
+                  <Link href="/comming_soon">
                     View Examples
                   </Link>
                 </Button>
