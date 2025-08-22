@@ -32,13 +32,13 @@ const Footer = (props: Props) => {
             <Github className="h-5 w-5" />
           </Link>
           <Link
-            href="/comming_soon"
+            href="/coming_soon"
             className="text-sm text-muted-foreground hover:text-foreground"
           >
             Documentation
           </Link>
           <Link
-            href="/comming_soon"
+            href="/coming_soon"
             className="text-sm text-muted-foreground hover:text-foreground"
           >
             Examples
