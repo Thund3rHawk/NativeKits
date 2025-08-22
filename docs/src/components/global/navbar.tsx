@@ -40,19 +40,19 @@ const Navbar = (props: Props) => {
         </div>
         <nav className="flex items-center space-x-6 text-sm font-medium">
           <Link
-            href="/docs"
+            href="/comming_soon"
             className="transition-colors hover:text-foreground/80"
           >
             Documentation
           </Link>
           <Link
-            href="#components"
+            href="/comming_soon"
             className="transition-colors hover:text-foreground/80"
           >
             Components
           </Link>
           <Link
-            href="#examples"
+            href="/comming_soon"
             className="transition-colors hover:text-foreground/80"
           >
             Examples
@@ -69,7 +69,7 @@ const Navbar = (props: Props) => {
             </Link>
           </Button>
           <Button size="sm" asChild>
-            <Link href="/docs">Get Started</Link>
+            <Link href="/comming_soon">Get Started</Link>
           </Button>
           <ThemeToggle />
         </div>
