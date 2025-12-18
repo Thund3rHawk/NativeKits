@@ -8,11 +8,17 @@ import {
   CardHeader,
   CardContent,
   CardFooter,
-  CardImage
+  CardImage,
+  Slider
 } from 'nativekits';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { useState } from 'react';
 
 export default function Index() {
+  const [volume, setVolume] = useState(50);
+  const [brightness, setBrightness] = useState(75);
+  const [temperature, setTemperature] = useState(22);
+
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: '#f5f5f5' }}
@@ -135,6 +141,87 @@ export default function Index() {
           <Text>This is an error alert</Text>
         </Alert>
       </View>
+
+      {/* Slider Examples */}
+      <Text style={{ fontSize: 18, fontWeight: '600', marginTop: 16, marginBottom: 8 }}>
+        Slider Component
+      </Text>
+      
+      <Card>
+        <CardContent>
+          <View style={{ gap: 16 }}>
+            {/* Volume Slider */}
+            <View>
+              <Text style={{ marginBottom: 8, fontWeight: '500' }}>
+                Volume: {volume}%
+              </Text>
+              <Slider
+                value={volume}
+                onValueChange={setVolume}
+                minimumValue={0}
+                maximumValue={100}
+                step={5}
+                variant="primary"
+                showTicks
+              />
+            </View>
+
+            {/* Brightness Slider with Value Label */}
+            <View>
+              <Text style={{ marginBottom: 8, fontWeight: '500' }}>
+                Brightness
+              </Text>
+              <Slider
+                value={brightness}
+                onValueChange={setBrightness}
+                minimumValue={0}
+                maximumValue={100}
+                variant="warning"
+                size="lg"
+                showValue
+                formatValue={(val) => `${val}%`}
+              />
+            </View>
+
+            {/* Temperature Slider */}
+            <View>
+              <Text style={{ marginBottom: 8, fontWeight: '500' }}>
+                Temperature: {temperature}°C
+              </Text>
+              <Slider
+                value={temperature}
+                onValueChange={setTemperature}
+                minimumValue={16}
+                maximumValue={30}
+                step={0.5}
+                variant="danger"
+                size="md"
+              />
+            </View>
+
+            {/* Different Variants */}
+            <View style={{ gap: 12 }}>
+              <Text style={{ fontWeight: '500' }}>Different Variants:</Text>
+              <Slider value={60} variant="primary" size="sm" />
+              <Slider value={70} variant="secondary" size="sm" />
+              <Slider value={80} variant="success" size="sm" />
+              <Slider value={50} variant="info" size="sm" />
+            </View>
+
+            {/* Disabled State */}
+            <View>
+              <Text style={{ marginBottom: 8, fontWeight: '500' }}>
+                Disabled Slider
+              </Text>
+              <Slider
+                value={50}
+                disabled
+                variant="primary"
+              />
+            </View>
+          </View>
+        </CardContent>
+      </Card>
     </ScrollView>
   );
 }
