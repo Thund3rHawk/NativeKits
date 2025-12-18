@@ -41,13 +41,17 @@ const Slider = ({
   const [currentValue, setCurrentValue] = useState(value);
   const thumbPosition = useRef(new Animated.Value(0)).current;
   const isSliding = useRef(false);
+  const gestureStartPosition = useRef(0);
 
-  // Calculate thumb position based on value
+  // Calculate thumb position based on value (accounting for thumb size at edges)
   const valueToPosition = useCallback(
     (val: number) => {
+      if (sliderWidth === 0) return 0;
       const clampedValue = Math.max(minimumValue, Math.min(maximumValue, val));
       const percentage = (clampedValue - minimumValue) / (maximumValue - minimumValue);
-      return percentage * sliderWidth;
+      const thumbSize = getThumbSize();
+      const trackWidth = sliderWidth - thumbSize;
+      return percentage * trackWidth + thumbSize / 2;
     },
     [minimumValue, maximumValue, sliderWidth]
   );
@@ -55,7 +59,11 @@ const Slider = ({
   // Calculate value based on thumb position
   const positionToValue = useCallback(
     (position: number) => {
-      const percentage = Math.max(0, Math.min(1, position / sliderWidth));
+      if (sliderWidth === 0) return minimumValue;
+      const thumbSize = getThumbSize();
+      const trackWidth = sliderWidth - thumbSize;
+      const adjustedPosition = position - thumbSize / 2;
+      const percentage = Math.max(0, Math.min(1, adjustedPosition / trackWidth));
       let val = minimumValue + percentage * (maximumValue - minimumValue);
       
       // Apply step
@@ -88,14 +96,18 @@ const Slider = ({
       onMoveShouldSetPanResponder: () => !disabled,
       onPanResponderGrant: () => {
         isSliding.current = true;
+        gestureStartPosition.current = valueToPosition(currentValue);
         if (onSlidingStart) {
           onSlidingStart(currentValue);
         }
       },
       onPanResponderMove: (_, gestureState) => {
+        const thumbSize = getThumbSize();
+        const minPosition = thumbSize / 2;
+        const maxPosition = sliderWidth - thumbSize / 2;
         const newPosition = Math.max(
-          0,
-          Math.min(sliderWidth, valueToPosition(currentValue) + gestureState.dx)
+          minPosition,
+          Math.min(maxPosition, gestureStartPosition.current + gestureState.dx)
         );
         const newValue = positionToValue(newPosition);
         
@@ -117,7 +129,7 @@ const Slider = ({
 
   const handleLayout = (event: LayoutChangeEvent) => {
     const { width } = event.nativeEvent.layout;
-    setSliderWidth(width - getThumbSize());
+    setSliderWidth(width);
     const initialPosition = valueToPosition(currentValue);
     thumbPosition.setValue(initialPosition);
   };
@@ -243,9 +255,18 @@ const Slider = ({
     return <View style={styles.ticksContainer}>{ticks}</View>;
   };
 
+  // Calculate decimal places based on step precision
+  const getDecimalPlaces = (stepValue: number): number => {
+    if (stepValue >= 1) return 0;
+    const stepString = stepValue.toString();
+    const decimalIndex = stepString.indexOf('.');
+    if (decimalIndex === -1) return 0;
+    return stepString.length - decimalIndex - 1;
+  };
+
   const displayValue = formatValue
     ? formatValue(currentValue)
-    : currentValue.toFixed(step < 1 ? 1 : 0);
+    : currentValue.toFixed(getDecimalPlaces(step));
 
   return (
     <View style={containerStyles} testID={testID}>
@@ -275,6 +296,7 @@ const Slider = ({
           style={[
             thumbStyles,
             {
+              left: -thumbSize / 2,
               transform: [
                 {
                   translateX: thumbPosition,
