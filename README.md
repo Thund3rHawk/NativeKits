@@ -298,7 +298,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 3. Make your changes
 4. Run tests: `npm test`
 5. Run linting: `npm run lint`
-6. Commit your changes: `git commit -m 'Add amazing feature'`
+6. Commit your changes and make sure your commits are signed (-s): `git commit -s -m “my commit message w/signoff”`
 7. Push to the branch: `git push origin feature/amazing-feature`
 8. Open a Pull Request
 
