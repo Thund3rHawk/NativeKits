@@ -14,7 +14,7 @@
     "!**/__mocks__"
   ],
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && npm run build",
     "start": "cd example && npx expo start",
     "build": "tsc",
     "dev": "tsc --watch",

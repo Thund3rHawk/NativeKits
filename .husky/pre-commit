@@ -1,4 +1,5 @@
-echo 'Performing code styling, testing, and building processes before committing'
+# npm test
+# echo 'Performing code styling, testing, and building processes before committing'
 
 # Check ESLint Standards
 npm run lint ||
@@ -22,7 +23,7 @@ npm run type-check ||
 # )
 
 # Check the code formatted correctly
-npx prettier . --check ||
+npm run format-check ||
 (
     echo 'Run `npx prettier . --write` to fix.'
     false;
