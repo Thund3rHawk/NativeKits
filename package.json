@@ -14,6 +14,7 @@
     "!**/__mocks__"
   ],
   "scripts": {
+    "prepare": "husky && npm run build",
     "start": "cd example && npx expo start",
     "build": "tsc",
     "dev": "tsc --watch",
@@ -21,7 +22,6 @@
     "type-check": "tsc --noEmit",
     "docs:dev": "cd docs && npm run dev",
     "docs:build": "cd docs && npm run build",
-    "prepare": "npm run build",
     "lint": "eslint",
     "example": "npm --cwd example",
     "format": "prettier --write .",
