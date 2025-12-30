@@ -14,4 +14,5 @@ jobs:
           fetch-depth: 0
       - name: DCO Check
         uses: dcoapp/dco-check-action@v1
-      
+    
+    
