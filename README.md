@@ -170,6 +170,74 @@ import { Accordion, AccordionItem, theme } from 'nativekits';
 </Accordion>
 ```
 
+### Slider
+
+A customizable slider component for selecting values from a range, perfect for settings, filters, and value adjustments.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `number` | `0` | Current value of the slider |
+| `onValueChange` | `(value: number) => void` | `undefined` | Callback when value changes |
+| `onSlidingStart` | `(value: number) => void` | `undefined` | Callback when sliding starts |
+| `onSlidingComplete` | `(value: number) => void` | `undefined` | Callback when sliding completes |
+| `minimumValue` | `number` | `0` | Minimum value of the slider |
+| `maximumValue` | `number` | `100` | Maximum value of the slider |
+| `step` | `number` | `1` | Step value for increment/decrement |
+| `variant` | `SliderVariant` | `'primary'` | Visual style variant (primary, secondary, success, warning, danger, info) |
+| `size` | `SliderSize` | `'md'` | Size of the slider (sm, md, lg) |
+| `disabled` | `boolean` | `false` | Whether the slider is disabled |
+| `showValue` | `boolean` | `false` | Whether to show the value label |
+| `formatValue` | `(value: number) => string` | `undefined` | Custom format function for value label |
+| `minimumTrackTintColor` | `string` | `undefined` | Custom color for the filled track |
+| `maximumTrackTintColor` | `string` | `undefined` | Custom color for the unfilled track |
+| `thumbTintColor` | `string` | `undefined` | Custom color for the thumb |
+| `showTicks` | `boolean` | `false` | Show tick marks at step intervals |
+| `style` | `ViewStyle` | `undefined` | Custom styles for the container |
+| `trackStyle` | `ViewStyle` | `undefined` | Custom styles for the track |
+| `thumbStyle` | `ViewStyle` | `undefined` | Custom styles for the thumb |
+
+#### Example
+
+```tsx
+import React, { useState } from 'react';
+import { View, Text } from 'react-native';
+import { Slider } from 'nativekits';
+
+const App = () => {
+  const [volume, setVolume] = useState(50);
+  const [brightness, setBrightness] = useState(75);
+
+  return (
+    <View style={{ padding: 16 }}>
+      <Text>Volume: {volume}%</Text>
+      <Slider
+        value={volume}
+        onValueChange={setVolume}
+        minimumValue={0}
+        maximumValue={100}
+        step={5}
+        variant="primary"
+        showValue
+        showTicks
+      />
+
+      <Text style={{ marginTop: 20 }}>Brightness</Text>
+      <Slider
+        value={brightness}
+        onValueChange={setBrightness}
+        minimumValue={0}
+        maximumValue={100}
+        variant="warning"
+        size="lg"
+        formatValue={(val) => `${val}%`}
+      />
+    </View>
+  );
+};
+```
+
 ## 🎨 Theming
 
 The library comes with a built-in theme system that you can customize:
